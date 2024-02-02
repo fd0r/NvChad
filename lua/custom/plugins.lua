@@ -3,6 +3,9 @@ local overrides = require "custom.configs.overrides"
 ---@type NvPluginSpec[]
 local plugins = {
   -- Override plugin definition options
+  { "mfussenegger/nvim-dap" },
+  { "rcarriga/nvim-dap-ui" },
+  { "folke/neodev.nvim" },
   {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -46,6 +49,9 @@ local plugins = {
         -- c/cpp stuff
         "clangd",
         "clang-format",
+
+        -- rust
+        "rust-analyzer",
       },
     },
   },
@@ -89,7 +95,7 @@ local plugins = {
     config = function(_opts)
       local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
       require("dap-python").setup(path)
-      require("core.utils").load_mappings("dap_python")
+      require("core.utils").load_mappings "dap_python"
     end,
   },
   {

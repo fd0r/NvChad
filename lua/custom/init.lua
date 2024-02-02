@@ -49,3 +49,7 @@ elseif zama_root_dir then
   -- print "in zama work dir"
   setup_python_for_zama()
 end
+
+vim.api.nvim_set_option("relativenumber", true)
+vim.api.nvim_set_option("wrap", false)
+

@@ -10,15 +10,29 @@ M.treesitter = {
     "typescript",
     "tsx",
     "c",
+    "cpp",
     "markdown",
     "markdown_inline",
+    "python",
+    "rust",
+    "yaml",
+    "json",
   },
   indent = {
     enable = true,
-    -- disable = {
-    --   "python"
-    -- },
   },
+  highlight = {
+    enable = true,
+  },
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "<C-space>",
+      node_incremental = "<C-space>",
+      scope_incremental = false,
+      node_decremental = "<bs>",
+    }
+  }
 }
 
 M.mason = {
@@ -37,6 +51,9 @@ M.mason = {
     -- c/cpp stuff
     "clangd",
     "clang-format",
+
+    -- tex
+    "latexindent",
   },
 }
 
